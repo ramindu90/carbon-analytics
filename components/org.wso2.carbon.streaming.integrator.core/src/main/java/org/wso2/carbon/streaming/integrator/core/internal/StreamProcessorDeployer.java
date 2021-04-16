@@ -117,7 +117,7 @@ public class StreamProcessorDeployer implements Deployer {
                                                     SiddhiAppProcessorConstants.ANNOTATION_ASYNC_API_NAME, file.getName());
                                     AsyncAPIDeployer asyncAPIDeployer =
                                             new AsyncAPIDeployer(asyncAPIServiceCatalogueConfigs, asyncAPIValue);
-                                    asyncAPIDeployExecutorService.execute(asyncAPIDeployer);
+                                    asyncAPIDeployer.run();
                                 }
                             } catch (SiddhiAppConfigurationException e){
                                 if (log.isDebugEnabled()) {
